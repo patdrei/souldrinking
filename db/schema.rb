@@ -10,10 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_30_141131) do
+ActiveRecord::Schema.define(version: 2020_10_01_151959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "properties", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "property_preferences", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "property_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["property_id"], name: "index_property_preferences_on_property_id"
+    t.index ["user_id"], name: "index_property_preferences_on_user_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.bigint "wine_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_ratings_on_user_id"
+    t.index ["wine_id"], name: "index_ratings_on_wine_id"
+  end
+
+  create_table "retailers", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stock_wines", force: :cascade do |t|
+    t.bigint "retailer_id", null: false
+    t.bigint "wine_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["retailer_id"], name: "index_stock_wines_on_retailer_id"
+    t.index ["wine_id"], name: "index_stock_wines_on_wine_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +69,42 @@ ActiveRecord::Schema.define(version: 2020_09_30_141131) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wine_connections", force: :cascade do |t|
+    t.bigint "wine_id", null: false
+    t.bigint "user_id", null: false
+    t.boolean "public"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_wine_connections_on_user_id"
+    t.index ["wine_id"], name: "index_wine_connections_on_wine_id"
+  end
+
+  create_table "wine_properties", force: :cascade do |t|
+    t.bigint "wine_id", null: false
+    t.bigint "property_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["property_id"], name: "index_wine_properties_on_property_id"
+    t.index ["wine_id"], name: "index_wine_properties_on_wine_id"
+  end
+
+  create_table "wines", force: :cascade do |t|
+    t.integer "year"
+    t.string "name"
+    t.text "description"
+    t.string "location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "property_preferences", "properties"
+  add_foreign_key "property_preferences", "users"
+  add_foreign_key "ratings", "users"
+  add_foreign_key "ratings", "wines"
+  add_foreign_key "stock_wines", "retailers"
+  add_foreign_key "stock_wines", "wines"
+  add_foreign_key "wine_connections", "users"
+  add_foreign_key "wine_connections", "wines"
+  add_foreign_key "wine_properties", "properties"
+  add_foreign_key "wine_properties", "wines"
 end
