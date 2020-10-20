@@ -1,5 +1,5 @@
 #intro {
-  background: rgba(1,1,1,0.1) url(https://i.pinimg.com/564x/5d/b8/53/5db853b1dbd42a2b795e2ad69edfb025.jpg) no-repeat center bottom;
+  background: rgba(1,1,1,0.1) url(./wine.jpg) no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(1,1,1,0.4);
+  background: rgba(1,1,1,0.1);
   opacity: .85;
 }
 
@@ -30,7 +30,7 @@
   transform: translateY(-2.1rem);
 }
 .intro-content h1 {
-  color: #FFFFFF;
+  color: $info;
   font-family: $my-font;
   font-size: 3rem;
   line-height: 1.071;
@@ -42,9 +42,9 @@
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-  color: $success;
+  color: $info;
   font-family: $my-font;
-  font-size: 0.5rem;
+  font-size: 2.5rem;
   line-height: 1.565;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   line-height: 2.4rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  color: #FFFFFF;
+  color: $info;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position span {
@@ -78,7 +78,7 @@
   color: rgba(255, 255, 255, 0.3);
 }
 .intro-content .button {
-  color: #FFFFFF !important;
+  color: §info !important;
   border-color: rgba(255, 255, 255, 0.3);
   height: 6rem !important;
   line-height: 5.4rem !important;
@@ -89,7 +89,7 @@
   letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-  border-color: $success;
+  border-color: $info;
 }
 .intro-content .button::after {
   display: inline-block;
@@ -121,7 +121,7 @@
   color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-  color: §success;
+  color: §info;
 }
 
 /**

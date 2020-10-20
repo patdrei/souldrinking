@@ -4,13 +4,19 @@ header {
   min-height: 66px;
   z-index: 600;
 }
+
+header h4 {
+  color: $info;
+  font-family: $my-font;
+}
+
 header .row {
   position: relative;
   min-height: 66px;
 }
 header .top-bar {
   display: block;
-  background: #070707;
+  background: rgba(1,1,1,0.1);
   min-width: 220px;
   min-height: 66px;
   position: absolute;
@@ -53,7 +59,7 @@ header .logo a {
 }
 .menu-toggle span {
   display: block;
-  background-color: $success;
+  background-color: $info;
   width: 24px;
   height: 3px;
   margin-top: -1.5px;
@@ -111,7 +117,7 @@ header .logo a {
   background-color: rgba(255, 0, 119, 0);
 }
 .menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
-  background-color: $success;
+  background-color: $info;
   -moz-transition-delay: 0s, 0.2s;
   -o-transition-delay: 0s, 0.2s;
   -webkit-transition-delay: 0s, 0.2s;
@@ -144,7 +150,7 @@ header .logo a {
 
 /* dropdown nav */
 .main-navigation {
-  background: #000000;
+  background: rgba(1,1,1,0.1);
   padding: 24px 30px 42px;
   margin: 0;
   width: 100%;
@@ -160,19 +166,19 @@ header .logo a {
 }
 .main-navigation li a {
   display: block;
-  color: $success;
+  color: $info;
   width: auto;
   padding: 15px 0;
   line-height: 16px;
   border: none;
 }
 .main-navigation li a:hover {
-  color: $success;
+  color: $info;
   padding-left: 1rem;
 }
 .main-navigation li.current > a {
   background: none;
-  color: §success;
+  color: §info;
 }
 
 /**
