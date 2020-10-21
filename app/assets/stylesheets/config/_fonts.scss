@@ -16,13 +16,12 @@ $headers-font: 'EnriqueLightRound', "Helvetica", "sans-serif";
 $my-font: 'EnriqueLightRound';
 @font-face {
     font-family: 'EnriqueLightRound';
-    src: url('Enrique-LightRound.eot'); /* IE9 Compat Modes */
-    src: url('Enrique-LightRound.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('Enrique-LightRound.woff') format('woff'), /* Modern Browsers */
-         url('Enrique-LightRound.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('Enrique-LightRound.svg#Enrique-LightRound') format('svg'); /* Legacy iOS */
+    src: url('/assets/Enrique-LightRound.eot'); /* IE9 Compat Modes */
+    src: url('/assets/Enrique-LightRound.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/Enrique-LightRound.woff') format('woff'), /* Modern Browsers */
+         url('/assets/Enrique-LightRound.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/assets/Enrique-LightRound.svg#Enrique-LightRound') format('svg'); /* Legacy iOS */
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
-
