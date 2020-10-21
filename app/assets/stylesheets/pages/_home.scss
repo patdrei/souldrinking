@@ -30,21 +30,21 @@
   transform: translateY(-2.1rem);
 }
 .intro-content h1 {
-  color: $info;
-  font-family: $my-font;
-  font-size: 3rem;
+  color:#d7d7d7;
+  font-family: 'EnriqueLightRound', sans-serif;
+  font-size: 8vw;
   line-height: 1.071;
   max-width: 900px;
   margin-top: 0;
   margin-bottom: .6rem;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .intro-content h5 {
-  color: $info;
-  font-family: $my-font;
-  font-size: 2.5rem;
+  color:#d7d7d7;
+  font-family: 'EnriqueLightRound', sans-serif;
+  font-size: 3vw;
   line-height: 1.565;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -52,12 +52,12 @@
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position {
-  font-family: $my-font;
-  font-size: 1.7rem;
+  font-family: 'EnriqueLightRound', sans-serif;
+  font-size: 3vw;
   line-height: 2.4rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  color: $info;
+  color:#d7d7d7;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position span {
@@ -68,34 +68,34 @@
   text-align: center;
   display: inline-block;
   padding: 0 8px 0 14px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
 }
 .intro-content .intro-position span:first-child::before {
   content: "|";
   text-align: center;
   display: inline-block;
   padding: 0 14px 0 8px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
 }
 .intro-content .button {
-  color: §info !important;
-  border-color: rgba(255, 255, 255, 0.3);
+  color: #d7d7d7 !important;
+  border-color: rgba(255, 255, 255, 0.7);
   height: 6rem !important;
   line-height: 5.4rem !important;
   padding: 0 3.5rem 0 3rem !important;
   margin-top: .6rem;
-  font-size: 1.3rem;
+  font-size: 1.5vw;
   text-transform: uppercase;
   letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-  border-color: $info;
+  border-color:#d7d7d7;
 }
 .intro-content .button::after {
   display: inline-block;
   content: "\f107";
   font-family: fontAwesome;
-  font-size: 1.6rem;
+  font-size: 1.5vw;
   line-height: inherit;
   text-align: center;
   position: relative;
@@ -118,10 +118,10 @@
   padding: 0;
 }
 .intro-social li a, .intro-social li a:visited {
-  color: #FFFFFF;
+  color: #d7d7d7FF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-  color: §info;
+  color: §#d7d7d7;
 }
 
 /**
@@ -131,10 +131,10 @@
  */
 @media only screen and (max-width:1024px) {
   .intro-content h1 {
-    font-size: 7.6rem;
+    font-size: 8vw;
   }
   .intro-social {
-    font-size: 3rem;
+    font-size: 3vw;
   }
   .intro-social li {
     margin: 0 15px;
@@ -145,16 +145,16 @@
     min-height: 660px;
   }
   .intro-content h1 {
-    font-size: 5.2rem;
+    font-size: 8vw;
   }
   .intro-content h5 {
-    font-size: 1.8rem;
+    font-size: 3vw;
   }
   .intro-content .intro-position {
-    font-size: 1.3rem;
+    font-size: 3vw;
   }
   .intro-social {
-    font-size: 2.5rem;
+    font-size: 3vw;
   }
   .intro-social li {
     margin: 0 10px;
@@ -165,16 +165,16 @@
     min-height: 600px;
   }
   .intro-content h1 {
-    font-size: 4.6rem;
+    font-size: 8vw;
     margin-bottom: .6rem;
   }
   .intro-content h5 {
-    font-size: 1.5rem;
+    font-size: 3vw;
     margin-bottom: .3rem;
     letter-spacing: .2rem;
   }
   .intro-content .intro-position {
-    font-size: 1.2rem;
+    font-size: 3vw;
   }
   .intro-content .intro-position span {
     padding: 0 .6rem;
@@ -183,6 +183,6 @@
     display: none !important;
   }
   .intro-social {
-    font-size: 2.4rem;
+    font-size: 3vw;
   }
 }
