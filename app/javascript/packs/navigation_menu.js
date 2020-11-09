@@ -1,4 +1,4 @@
- var toggleButton = $('.menu-toggle'),
+ const toggleButton = $('.menu-toggle'),
    nav = $('.main-navigation');
 
  // toggle button
